@@ -1,5 +1,6 @@
 @import "../includes/header/style";
 @import "../includes/welcomeSection/style";
+@import "../includes/processSection/style";
 @import "../includes/designSection/style";
 @import "../includes/mobileSection/style";
 @import "../includes/presentSection/style";
@@ -19,13 +20,13 @@ body {
   font-family: "SF Pro Display", sans-serif;
   font-weight: 300;
   font-style: normal;
+  color: $text-color;
   background-color: $bg-color;
 }
 
 .wrapper {
   position: relative;
   max-width: 1440px;
-  height: 10000px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -39,7 +40,7 @@ body {
 
 .subtitle {
   margin-bottom: 10px;
-  color: #26252a;
+  color: $text-color;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -48,7 +49,7 @@ body {
 }
 
 .text {
-  color: #26252a;
+  color: $text-color;
   font-size: 26px;
   font-style: normal;
   font-weight: 300;

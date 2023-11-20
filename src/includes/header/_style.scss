@@ -7,15 +7,15 @@
     align-items: center;
     line-height: 38px;
     & li {
-      color: #170754;
+      color: $blue-color;
     }
     & li:nth-child(2),
     li:nth-child(4) {
       font-size: 26px;
-      color: #26252a;
+      color: $text-color;
     }
     & li:nth-child(3) {
-      color: #c10610;
+      color: $red-color;
     }
   }
   .stripes {

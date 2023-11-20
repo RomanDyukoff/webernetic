@@ -3,6 +3,24 @@ $heights: 850px, 710px, 710px, 703px, 710px, 843px;
 $margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
 
 .mobile {
+  &__lines {
+    position: absolute;
+    top: 220px;
+    left: -76%;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    width: 3000px;
+    z-index: -10;
+    transform: rotate(20deg);
+    animation: slide 2s forwards linear;
+  }
+
+  &__line {
+    width: 100%;
+    border-bottom: 1px solid rgba(22, 7, 85, 0.3);
+  }
+
   &__imgs {
     width: min-content;
     column-count: 3;
@@ -18,7 +36,7 @@ $margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
         center /
         cover
         no-repeat;
-      border: 3px solid rgba(217, 217, 217, 0.3);
+      border: $border-color;
       box-shadow: 2px 2px 5px 0px rgba(163, 176, 188, 0.1),
         -4px -4px 8px 0px rgba(163, 176, 188, 0.05);
       margin: nth($margins, $i);

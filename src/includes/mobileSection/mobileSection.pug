@@ -1,5 +1,8 @@
 section.mobile
 	.container
+		.mobile__lines
+			- for (var i = 0; i < 3; i++)
+				div(class="mobile__line")
 		.mobile__wrapper
 			.mobile__imgs
 				- for (var i = 0; i < 6; i++)

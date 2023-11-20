@@ -1,5 +1,6 @@
-export const scrollLogo = (min, max) => {
-  const logo = document.querySelector(".welcome__logo");
+export const logo = document.querySelector(".welcome__logo");
+
+export const scrollLogo = (el, min, max) => {
   let scrollPosition = window.scrollY;
 
   let minScroll = min;
@@ -9,6 +10,6 @@ export const scrollLogo = (min, max) => {
     let newPosition =
       ((scrollPosition - minScroll) / (maxScroll - minScroll)) * min;
 
-    logo.style.transform = "translateY(" + newPosition + "px)";
+    el.style.transform = "translateY(" + newPosition + "px)";
   }
 };

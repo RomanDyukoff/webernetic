@@ -21,10 +21,10 @@
     line-height: 145%;
     letter-spacing: 0.65px;
     &:nth-child(1) {
-      color: #c10610;
+      color: $red-color;
     }
     &:nth-child(2) {
-      color: #170754;
+      color: $blue-color;
     }
   }
   &__red,
@@ -38,13 +38,13 @@
   }
   &__red {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #c10610;
-    border-bottom: 5px solid #c10610;
+    -webkit-text-stroke: 2px $red-color;
+    border-bottom: 5px solid $red-color;
   }
   &__blue {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #170754;
-    border-bottom: 5px solid #170754;
+    -webkit-text-stroke: 2px $blue-color;
+    border-bottom: 5px solid $blue-color;
   }
 
   &__text {
