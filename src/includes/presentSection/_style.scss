@@ -1,0 +1,18 @@
+.present {
+  &__wrapper {
+    display: inline-flex;
+    gap: 87px;
+    padding: 40px 0;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 594px;
+  }
+  &__image {
+    width: 431px;
+    height: 280px;
+    background: url("../../assets/img/logo3.svg") center no-repeat;
+  }
+}

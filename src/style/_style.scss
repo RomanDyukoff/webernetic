@@ -1,0 +1,72 @@
+@import "../includes/header/style";
+@import "../includes/welcomeSection/style";
+@import "../includes/designSection/style";
+@import "../includes/mobileSection/style";
+@import "../includes/presentSection/style";
+@import "../includes/fontSection/style";
+@import "../includes/mockupSection/style";
+@import "../includes/aboutSection/style";
+@import "../includes/footer/style";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: $bg-color;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1440px;
+  height: 10000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+  color: #26252a;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.65px;
+}
+
+.text {
+  color: #26252a;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 139%;
+  letter-spacing: 0.65px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 70px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

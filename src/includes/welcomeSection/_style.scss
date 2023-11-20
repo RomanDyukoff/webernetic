@@ -1,0 +1,77 @@
+.welcome {
+  position: relative;
+  &__title {
+    font-size: 105px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 123%;
+    letter-spacing: 2.625px;
+    margin-bottom: 479px;
+    & span {
+      color: #c10610;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 28.5%;
+    right: 0;
+    width: 566px;
+  }
+  &__about {
+    position: relative;
+    display: flex;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 595px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    list-style: disc;
+    padding: 0 0 0 2rem;
+  }
+  &__stacks {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 415px;
+    height: 272px;
+    transition: top 0.1s ease-out;
+  }
+  &__stack {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 50px;
+    &:nth-child(1) {
+      background-image: url("../../assets/img/wp-img.png");
+    }
+    &:nth-child(2) {
+      background-image: url("../../assets/img/js-img.png");
+    }
+    &:nth-child(3) {
+      background-image: url("../../assets/img/figma-img.png");
+    }
+    &:nth-child(4) {
+      background-image: url("../../assets/img/css-img.png");
+    }
+    &:nth-child(5) {
+      background-image: url("../../assets/img/html-img.png");
+    }
+    &:nth-child(6) {
+      background-image: url("../../assets/img/php-img.png");
+    }
+  }
+}

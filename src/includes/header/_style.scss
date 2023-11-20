@@ -1,0 +1,46 @@
+.header {
+  position: relative;
+  padding: 58px 0 40px 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 38px;
+    & li {
+      color: #170754;
+    }
+    & li:nth-child(2),
+    li:nth-child(4) {
+      font-size: 26px;
+      color: #26252a;
+    }
+    & li:nth-child(3) {
+      color: #c10610;
+    }
+  }
+  .stripes {
+    position: absolute;
+    top: 223%;
+    left: -69%;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    width: 3000px;
+    z-index: -10;
+    transform: rotate(20deg);
+    animation: slide 2s forwards linear;
+  }
+  .stripe {
+    width: 100%;
+    border-bottom: 1px solid rgba(22, 7, 85, 0.3);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(-160deg) translateX(100%);
+  }
+  100% {
+    transform: rotate(-160deg) translateX(-20%);
+  }
+}

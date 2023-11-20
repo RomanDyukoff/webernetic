@@ -1,0 +1,53 @@
+.font {
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__wrapper {
+    display: inline-flex;
+    gap: 92px;
+    padding: 40px 0;
+  }
+  &__letters {
+    display: flex;
+    justify-content: space-between;
+    width: 408px;
+  }
+  &__letter {
+    width: 184px;
+    height: 172px;
+    font-size: 26px;
+    font-style: normal;
+    line-height: 145%;
+    letter-spacing: 0.65px;
+    &:nth-child(1) {
+      color: #c10610;
+    }
+    &:nth-child(2) {
+      color: #170754;
+    }
+  }
+  &__red,
+  &__blue {
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 115%;
+    letter-spacing: 3.75px;
+    margin-bottom: 10px;
+  }
+  &__red {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #c10610;
+    border-bottom: 5px solid #c10610;
+  }
+  &__blue {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #170754;
+    border-bottom: 5px solid #170754;
+  }
+
+  &__text {
+    width: 566px;
+  }
+}

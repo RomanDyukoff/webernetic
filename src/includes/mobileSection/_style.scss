@@ -1,0 +1,27 @@
+$images: "mobile1", "mobile4", "mobile2", "mobile5", "mobile3", "mobile6";
+$heights: 850px, 710px, 710px, 703px, 710px, 843px;
+$margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
+
+.mobile {
+  &__imgs {
+    width: min-content;
+    column-count: 3;
+    column-gap: 25px;
+  }
+
+  @for $i from 1 through length($images) {
+    &__img:nth-child(#{$i}) {
+      display: inline-block;
+      width: 370px;
+      height: nth($heights, $i);
+      background: url("../../assets/img/#{nth($images, $i)}.png")
+        center /
+        cover
+        no-repeat;
+      border: 3px solid rgba(217, 217, 217, 0.3);
+      box-shadow: 2px 2px 5px 0px rgba(163, 176, 188, 0.1),
+        -4px -4px 8px 0px rgba(163, 176, 188, 0.05);
+      margin: nth($margins, $i);
+    }
+  }
+}

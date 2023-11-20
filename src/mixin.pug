@@ -1,0 +1,6 @@
+mixin textBox(title, team)
+	.welcome__box
+		h4.subtitle= title
+		ul.welcome__list.text
+			each member in team
+				li= member

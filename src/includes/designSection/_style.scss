@@ -1,0 +1,19 @@
+.design {
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__image {
+    width: 381px;
+    height: 381px;
+    background: url("../../assets/img/logo2.svg") no-repeat center;
+  }
+  &__wrapper {
+    display: inline-flex;
+    gap: 135.5px;
+    padding: 40px 0;
+  }
+  &__box {
+    width: 566px;
+  }
+}

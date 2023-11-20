@@ -1,0 +1,10 @@
+@import "~normalize.css";
+@import "./style/fonts";
+@import "style/var";
+@import "style/style";
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
