@@ -23,7 +23,12 @@
     width: 3000px;
     z-index: -10;
     transform: rotate(20deg);
-    animation: slide 2s forwards linear;
+    @media (max-width: $max-width) {
+      top: 25%;
+      left: -100%;
+      gap: 70px;
+      width: 1000px;
+    }
   }
   &__line {
     width: 100%;

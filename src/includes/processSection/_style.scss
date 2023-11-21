@@ -10,7 +10,12 @@
     width: 3000px;
     z-index: -10;
     transform: rotate(20deg);
-    animation: slide 2s forwards linear;
+    @media (max-width: $max-width) {
+      top: 10%;
+      left: -100%;
+      gap: 70px;
+      width: 1000px;
+    }
   }
   &__line {
     width: 100%;
@@ -21,6 +26,17 @@
 .scroll {
   position: relative;
   margin-left: calc((1440px - 1160px) / 2);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -20px 20px 5px rgb(255 255 255 / 0.7);
+    pointer-events: none;
+    z-index: 1;
+  }
   &__container {
     position: relative;
     width: 100%;
@@ -32,6 +48,7 @@
     min-width: min-content;
   }
   &__slide {
+    position: relative;
     width: 449px;
     height: 600px;
     flex-shrink: 0;
@@ -41,6 +58,7 @@
       height: 100%;
       object-fit: cover;
       user-select: none;
+      z-index: -1;
     }
   }
   &__controller {
@@ -79,6 +97,17 @@
     }
     &:hover {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: $max-width) {
+    margin-left: calc((360px - 320px) / 2);
+    &__slide {
+      width: 280px;
+      height: 374px;
+    }
+    &__controller {
+      top: 150px;
     }
   }
 }

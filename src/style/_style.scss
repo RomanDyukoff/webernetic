@@ -81,6 +81,10 @@ body {
   flex-direction: column;
   gap: 100px;
   margin-bottom: 70px;
+  @media (max-width: $max-width) {
+    gap: 45px;
+    margin-bottom: 60px;
+  }
 }
 
 a {

@@ -7,14 +7,20 @@ $margins-mob: 30px 0 25px 0, 0, 0 0 25px 0, 0, 30px 0 25px 0, 0;
 .mobile {
   &__lines {
     position: absolute;
-    top: 220px;
-    left: -76%;
+    top: 250px;
+    left: -50%;
     display: flex;
     flex-direction: column;
     gap: 160px;
     width: 3000px;
     z-index: -10;
     transform: rotate(20deg) translateX(-20%) translateY(0);
+    @media (max-width: $max-width) {
+      top: 20%;
+      left: -100%;
+      gap: 70px;
+      width: 1000px;
+    }
   }
 
   &__line {

@@ -26,21 +26,28 @@
       padding: 14px 0 30px 0;
     }
   }
-  .stripes {
-    position: absolute;
-    top: 223%;
-    left: -69%;
-    display: flex;
-    flex-direction: column;
-    gap: 160px;
-    width: 3000px;
-    z-index: -10;
-    transform: rotate(20deg);
-    animation: slide 2s forwards linear;
-  }
-  .stripe {
+}
+
+.stripes {
+  position: absolute;
+  top: 223%;
+  left: -69%;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  width: 3000px;
+  z-index: -10;
+  transform: rotate(20deg);
+  animation: slide 2s forwards linear;
+  &__stripe {
     width: 100%;
     border-bottom: 1px solid rgba(22, 7, 85, 0.3);
+  }
+  @media (max-width: $max-width) {
+    top: 120%;
+    left: -100%;
+    gap: 70px;
+    width: 1000px;
   }
 }
 
@@ -50,5 +57,16 @@
   }
   100% {
     transform: rotate(-160deg) translateX(-20%) translateY(0);
+  }
+}
+
+@media (max-width: $max-width) {
+  @keyframes slide {
+    0% {
+      transform: rotate(-150deg) translateX(100%);
+    }
+    100% {
+      transform: rotate(-150deg) translateX(-10%) translateY(0);
+    }
   }
 }
