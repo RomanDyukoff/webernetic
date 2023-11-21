@@ -3,6 +3,41 @@ import "./index.scss";
 import { addScrollEvent, logo, lines } from "./modules/scrollLogo";
 import { createSlider } from "./modules/slider";
 
+const labels = document.querySelectorAll(".footer__label");
+const textabels = [
+  "Сайт",
+  "Поддержка",
+  "Доработка",
+  "Аудит",
+  "Наполнение",
+  "Другое",
+];
+
+const debounce = (func, wait) => {
+  let timeout;
+  return (...args) => {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
+const handleResize = debounce(() => {
+  if (window.innerWidth <= 480 && labels) {
+    labels.forEach((label, i) => {
+      const span = label.querySelector("span");
+      if (span) {
+        span.textContent = textabels[i];
+      }
+    });
+  }
+}, 250);
+
+window.addEventListener("resize", handleResize);
+
 const scrollElements = [
   {
     el: logo,

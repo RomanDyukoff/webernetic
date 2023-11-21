@@ -14,4 +14,13 @@
     letter-spacing: 0.8px;
     color: #000;
   }
+  @media (max-width: $max-width) {
+    &__box {
+      padding: 15px;
+      margin-bottom: 0;
+    }
+    &__offer {
+      display: none;
+    }
+  }
 }

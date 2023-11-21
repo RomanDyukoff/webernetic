@@ -1,6 +1,8 @@
 $images: "mobile1", "mobile4", "mobile2", "mobile5", "mobile3", "mobile6";
 $heights: 850px, 710px, 710px, 703px, 710px, 843px;
+$heights-mob: 229px, 191px, 191px, 189px, 191px, 227px;
 $margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
+$margins-mob: 30px 0 25px 0, 0, 0 0 25px 0, 0, 30px 0 25px 0, 0;
 
 .mobile {
   &__lines {
@@ -13,7 +15,6 @@ $margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
     width: 3000px;
     z-index: -10;
     transform: rotate(20deg) translateX(-20%) translateY(0);
-    // transition: top 1s ease-out;
   }
 
   &__line {
@@ -40,6 +41,27 @@ $margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
       box-shadow: 2px 2px 5px 0px rgba(163, 176, 188, 0.1),
         -4px -4px 8px 0px rgba(163, 176, 188, 0.05);
       margin: nth($margins, $i);
+    }
+  }
+
+  @media (max-width: $max-width) {
+    &__imgs {
+      column-gap: 10px;
+    }
+    @for $i from 1 through length($images) {
+      &__img:nth-child(#{$i}) {
+        display: inline-block;
+        width: 100px;
+        height: nth($heights-mob, $i);
+        background: url("../../assets/img/#{nth($images, $i)}.png")
+          center /
+          cover
+          no-repeat;
+        border: $border-color;
+        box-shadow: 2px 2px 5px 0px rgba(163, 176, 188, 0.1),
+          -4px -4px 8px 0px rgba(163, 176, 188, 0.05);
+        margin: nth($margins-mob, $i);
+      }
     }
   }
 }

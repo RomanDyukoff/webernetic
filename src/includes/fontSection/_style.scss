@@ -50,4 +50,36 @@
   &__text {
     width: 566px;
   }
+  @media (max-width: $max-width) {
+    &__container {
+      justify-content: center;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
+    }
+    &__letters {
+      justify-content: center;
+      width: 100%;
+      gap: 30px;
+    }
+    &__letter {
+      width: 123px;
+    }
+    &__red,
+    &__blue {
+      font-size: 100px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 115%;
+      letter-spacing: 2.5px;
+      line-height: 115%;
+      margin-bottom: 10px;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
 }
