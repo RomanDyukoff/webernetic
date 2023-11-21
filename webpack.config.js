@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 const mode = process.env.NODE_ENV || "development";
 const devMode = mode === "development";
@@ -30,12 +31,24 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles/[name].[contenthash].css",
     }),
+    new FileManagerPlugin({
+      events: {
+        onStart: {
+          delete: ["dist"],
+        },
+      },
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
         loader: "html-loader",
+      },
+      {
+        test: /\.js$/,
+        use: "babel-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.pug$/,

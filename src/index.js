@@ -1,9 +1,26 @@
 import "./index.pug";
 import "./index.scss";
-import { scrollLogo, logo } from "./modules/scrollLogo";
+import { addScrollEvent, logo, lines } from "./modules/scrollLogo";
 import { createSlider } from "./modules/slider";
 
-window.addEventListener("scroll", () => scrollLogo(logo, 500, 1672));
+const scrollElements = [
+  {
+    el: logo,
+    start: 500,
+    end: 1672,
+    spead: 2,
+    prevTransform: "",
+  },
+  {
+    el: lines,
+    start: 4700,
+    end: 5700,
+    spead: 1,
+    prevTransform: "rotate(20deg) translateX(-20%)",
+  },
+];
 
 createSlider("controller", "thumb", "scrollContainer", "track");
 createSlider("controller_1", "thumb_1", "scrollContainer_1", "track_1");
+
+addScrollEvent(scrollElements);

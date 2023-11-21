@@ -41,6 +41,6 @@
     transform: rotate(-160deg) translateX(100%);
   }
   100% {
-    transform: rotate(-160deg) translateX(-20%);
+    transform: rotate(-160deg) translateX(-20%) translateY(0);
   }
 }

@@ -12,8 +12,8 @@ $margins: 140px 0 60px 0, 0, 0 0 60px 0, 0, 140px 0 60px 0, 0;
     gap: 160px;
     width: 3000px;
     z-index: -10;
-    transform: rotate(20deg);
-    animation: slide 2s forwards linear;
+    transform: rotate(20deg) translateX(-20%) translateY(0);
+    // transition: top 1s ease-out;
   }
 
   &__line {
