@@ -19,3 +19,7 @@ mixin scroll(controllerId, thumbId, containerId, trackId)
       .scroll__track(id=trackId)
         block
 
+mixin lines(lot, extraClass)
+  .lines(class=extraClass)
+    - for (var i = 0; i < lot; i++)
+      div(class="lines__line")

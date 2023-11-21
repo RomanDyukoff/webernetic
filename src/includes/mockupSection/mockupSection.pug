@@ -1,7 +1,5 @@
 include ../mixins/mixins.pug
 
 +sectionWrapper("mockup", "", "mockup__wrapper")
-	.mockup__lines
-		- for (var i = 0; i < 3; i++)
-			div(class="mockup__line")
+	+lines(3, "mockup__lines")
 

@@ -9,6 +9,44 @@
   }
 }
 
+.lines {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  width: 3000px;
+  z-index: -10;
+  transform: rotate(20deg);
+  &__line {
+    width: 100%;
+    border-bottom: 1px solid $lines-color;
+  }
+  @media (max-width: $max-width) {
+    gap: 70px;
+    width: 1000px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(-160deg) translateX(100%);
+  }
+  100% {
+    transform: rotate(-160deg) translateX(-20%) translateY(0);
+  }
+}
+
+@media (max-width: $max-width) {
+  @keyframes slide {
+    0% {
+      transform: rotate(-150deg) translateX(100%);
+    }
+    100% {
+      transform: rotate(-150deg) translateX(-10%) translateY(0);
+    }
+  }
+}
+
 .scroll {
   position: relative;
   margin-left: calc((1440px - 1160px) / 2);

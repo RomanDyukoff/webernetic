@@ -13,16 +13,24 @@ export const createSlider = (
 
   let mouseDown = false;
 
-  thumb.addEventListener("mousedown", () => (mouseDown = true));
-  window.addEventListener("mouseup", () => (mouseDown = false));
+  const startDrag = () => (mouseDown = true);
+  const stopDrag = () => (mouseDown = false);
 
-  controller.addEventListener("mousemove", (e) => {
+  thumb.addEventListener("mousedown", startDrag);
+  thumb.addEventListener("touchstart", startDrag);
+
+  window.addEventListener("mouseup", stopDrag);
+  window.addEventListener("touchend", stopDrag);
+
+  const moveSlider = (e) => {
     if (!mouseDown) return;
 
     let containerRect = controller.getBoundingClientRect();
     let sliderWidth = thumb.offsetWidth;
     let maxPosition = containerRect.width - sliderWidth;
-    let mousePosition = e.clientX - containerRect.left;
+
+    let clientX = e.clientX || e.touches[0].clientX;
+    let mousePosition = clientX - containerRect.left;
 
     let sliderPosition = Math.min(
       maxPosition,
@@ -33,5 +41,8 @@ export const createSlider = (
 
     let maxOffset = track.offsetWidth - scrollContainer.offsetWidth;
     scrollContainer.scrollLeft = (sliderPosition / maxPosition) * maxOffset;
-  });
+  };
+
+  controller.addEventListener("mousemove", moveSlider);
+  controller.addEventListener("touchmove", moveSlider);
 };
