@@ -47,16 +47,18 @@
     width: 415px;
     height: 272px;
     transition: top 0.1s ease-out;
+    background: url("../../assets/img/logo.svg") center no-repeat;
   }
   &__stack {
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+
     width: 80px;
     height: 50px;
     &:nth-child(1) {
-      background-image: url("../../assets/img/wp-img.png");
+      background: url("../../assets/img/wp-img.png");
     }
     &:nth-child(2) {
       background-image: url("../../assets/img/js-img.png");

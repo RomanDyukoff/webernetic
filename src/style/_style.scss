@@ -8,6 +8,7 @@
 @import "../includes/mockupSection/style";
 @import "../includes/aboutSection/style";
 @import "../includes/footer/style";
+@import "../includes/mixins/style.scss";
 
 * {
   box-sizing: border-box;
@@ -29,6 +30,9 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
+  @media (max-width: 576px) {
+    max-width: 360px;
+  }
 }
 
 .container {
@@ -36,6 +40,9 @@ body {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+  @media (max-width: 576px) {
+    max-width: 320px;
+  }
 }
 
 .subtitle {

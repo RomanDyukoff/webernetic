@@ -1,0 +1,75 @@
+.box {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    list-style: disc;
+    padding: 0 0 0 2rem;
+  }
+}
+
+.scroll {
+  position: relative;
+  margin-left: calc((1440px - 1160px) / 2);
+  &__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__track {
+    display: flex;
+    gap: 25px;
+    min-width: min-content;
+  }
+  &__slide {
+    width: 449px;
+    height: 600px;
+    flex-shrink: 0;
+    border: 3px solid $border-color;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+    }
+  }
+  &__controller {
+    position: absolute;
+    top: 262px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  &__thumb {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid $red-color;
+    background: #fff;
+    width: 54px;
+    height: 34px;
+    padding: 5px 3px;
+    cursor: grab;
+    opacity: 0.2;
+    z-index: 2;
+    &::after,
+    &::before {
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      color: $red-color;
+    }
+    &::after {
+      content: "\23F5";
+    }
+    &::before {
+      content: "\23F4";
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
