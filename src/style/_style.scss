@@ -23,6 +23,7 @@ body {
   font-style: normal;
   color: $text-color;
   background-color: $bg-color;
+  will-change: auto;
 }
 
 .wrapper {
@@ -30,7 +31,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
-  @media (max-width: 576px) {
+  @media (max-width: $max-width) {
     max-width: 360px;
   }
 }
@@ -40,8 +41,9 @@ body {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
-  @media (max-width: 576px) {
+  @media (max-width: $max-width) {
     max-width: 320px;
+    // margin: 0;
   }
 }
 
@@ -53,6 +55,11 @@ body {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: 0.65px;
+  @media (max-width: $max-width) {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.475px;
+  }
 }
 
 .text {
@@ -62,6 +69,11 @@ body {
   font-weight: 300;
   line-height: 139%;
   letter-spacing: 0.65px;
+  @media (max-width: $max-width) {
+    font-size: 19px;
+    line-height: 130%;
+    letter-spacing: 0.475px;
+  }
 }
 
 .main {

@@ -15,4 +15,23 @@
     height: 280px;
     background: url("../../assets/img/logo3.svg") center no-repeat;
   }
+  @media (max-width: $max-width) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 0;
+    }
+    &__text {
+      width: 100%;
+      gap: 5px;
+    }
+    &__image {
+      width: 260px;
+      height: 168px;
+      background-size: cover;
+    }
+  }
 }

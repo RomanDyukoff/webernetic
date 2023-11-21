@@ -1,6 +1,7 @@
 .header {
   position: relative;
   padding: 58px 0 40px 0;
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -8,6 +9,7 @@
     line-height: 38px;
     & li {
       color: $blue-color;
+      text-align: center;
     }
     & li:nth-child(2),
     li:nth-child(4) {
@@ -16,6 +18,12 @@
     }
     & li:nth-child(3) {
       color: $red-color;
+    }
+    @media (max-width: $max-width) {
+      font-size: 12px;
+      line-height: 12px;
+      gap: 12px;
+      padding: 14px 0 30px 0;
     }
   }
   .stripes {

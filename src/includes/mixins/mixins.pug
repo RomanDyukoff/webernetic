@@ -1,21 +1,21 @@
-mixin textBox(title, team, extraClass)
-	.box(class=extraClass)
-		h4.subtitle= title
-		ul.box__list.text
-			each member in team
-				li= member
+mixin textBox(title, team, boxClass)
+  .box(class=boxClass)
+    h4.box__title.subtitle= title
+    ul.box__list.text
+      each member in team
+        li= member
 
 mixin sectionWrapper(sectionClass, containerClass, articleClass)
-	section(class=sectionClass)
-		.container(class=containerClass)
-			article(class=articleClass)
-				block
+  section(class=sectionClass)
+    .container(class=containerClass)
+      article(class=articleClass)
+        block
 
 mixin scroll(controllerId, thumbId, containerId, trackId)
-	.scroll
-		.scroll__controller(id=controllerId)
-			.scroll__thumb(id=thumbId)
-		.scroll__container(id=containerId)
-			.scroll__track(id=trackId)
-				block
+  .scroll
+    .scroll__controller(id=controllerId)
+      .scroll__thumb(id=thumbId)
+    .scroll__container(id=containerId)
+      .scroll__track(id=trackId)
+        block
 
