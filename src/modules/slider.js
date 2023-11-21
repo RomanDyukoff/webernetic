@@ -4,6 +4,8 @@ export const createSlider = (
   scrollContainerId,
   trackId
 ) => {
+  if (!(controllerId && thumbId && scrollContainerId && trackId)) return;
+
   const controller = document.getElementById(controllerId);
   const thumb = document.getElementById(thumbId);
   const scrollContainer = document.getElementById(scrollContainerId);

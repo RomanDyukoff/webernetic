@@ -1,24 +1,23 @@
 section.process
-  .container
-    .process__lines
-      - for (var i = 0; i < 3; i++)
-        div(class="process__line")
-    .scroll
-      .scroll__controller#controller
-        .scroll__thumb#thumb
-      .scroll__container#scrollContainer
-        .scroll__track#track
-          .scroll__slide 
-            img(src=require("../../assets/img/slide1.png") alt="picture")
-          .scroll__slide
-            img(src=require("../../assets/img/slide2.png") alt="picture")
-          .scroll__slide
-            img(src=require("../../assets/img/slide3.png") alt="picture")
-          .scroll__slide
-            img(src=require("../../assets/img/slide4.png") alt="picture")
-          .scroll__slide
-            img(src=require("../../assets/img/slide5.png") alt="picture")
-          .scroll__slide
-            img(src=require("../../assets/img/slide6.png") alt="picture")
-          .scroll__slide
-            img(src=require("../../assets/img/slide7.png") alt="picture")
+  .process__lines
+    - for (var i = 0; i < 3; i++)
+      div(class="process__line")
+  .scroll
+    .scroll__controller#controller
+      .scroll__thumb#thumb
+    .scroll__container#scrollContainer
+      .scroll__track#track
+        .scroll__slide 
+          img(src=require("../../assets/img/slide1.png") alt="picture")
+        .scroll__slide
+          img(src=require("../../assets/img/slide2.png") alt="picture")
+        .scroll__slide
+          img(src=require("../../assets/img/slide3.png") alt="picture")
+        .scroll__slide
+          img(src=require("../../assets/img/slide4.png") alt="picture")
+        .scroll__slide
+          img(src=require("../../assets/img/slide5.png") alt="picture")
+        .scroll__slide
+          img(src=require("../../assets/img/slide6.png") alt="picture")
+        .scroll__slide
+          img(src=require("../../assets/img/slide7.png") alt="picture")

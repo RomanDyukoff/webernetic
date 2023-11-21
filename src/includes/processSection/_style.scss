@@ -20,6 +20,7 @@
 
 .scroll {
   position: relative;
+  margin-left: calc((1440px - 1160px) / 2);
   &__container {
     position: relative;
     width: 100%;
@@ -61,7 +62,7 @@
     height: 34px;
     padding: 5px 3px;
     cursor: grab;
-    opacity: 1;
+    opacity: 0.2;
     z-index: 2;
     &::after,
     &::before {
